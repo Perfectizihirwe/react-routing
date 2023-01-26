@@ -1,0 +1,42 @@
+/* p {
+  margin: 0;
+  color: "#fff";
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+}
+
+.imageContainer {
+  flex: 2;
+}
+
+.descriptionContainer {
+  flex: 1;
+}
+
+.topButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.sale {
+  /* float: right; */
+  color: white;
+  font-size: 14px;
+}
+
+.saleContainer {
+  background-color: #86898a;
+  padding: 1px 2px;
+  margin: 10px 10px;
+}
+
+.virtual {
+  color: white;
+}
