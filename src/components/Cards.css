@@ -1,0 +1,189 @@
+
+
+.wrapper{
+    margin: 10px 20px;
+    
+    width: 400px;
+    height: 630px;
+   
+    box-shadow: 0px 0px 10px -5px;
+    background-color: rgb(246, 251, 252);
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+
+}
+.card-container{
+        
+    width: 300px;
+    height: 300px;
+       
+    overflow: visible;
+    position: relative;
+
+}
+
+.image-container img{
+    
+    
+    height: 300px;
+    width: 400px;
+    padding: 0;
+    display: block;
+   
+}
+
+.image-container .icon1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 25px;
+    background-color: rgb(180, 166, 166);
+    
+}
+.image-container .icon2{
+    position: absolute;
+    bottom: 0;
+    right: -72px;
+    font-size: 25px;
+    background-color: rgb(180, 166, 166);
+    
+}
+.image-container .icon3{
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    font-size: 25px;
+    background-color: rgb(180, 166, 166);
+    
+}
+.image-container .icon4 span{
+   
+    font-size: 12px !important;
+    display: flex;
+   
+}
+.image-container .forsale{
+   
+    
+    position: absolute;
+    top: 10px;
+    margin-right: 10px;
+    right: -100px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 6px;
+    
+    background-color: rgb(180, 166, 166);
+  
+}
+
+.image-container .icon4{
+    position: absolute;
+    top: 50px;
+    margin-right: 10px;
+    right: -100px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width:35px;
+    padding-left: 6px;
+    
+    background-color: rgb(180, 166, 166);
+    
+}
+.info{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:20px;
+
+    width: 390px;
+   
+   
+}
+.info .info-1{
+    color:rgb(31, 30, 30);
+   
+}
+.info-1 h2{
+    color:#03B5C3;
+}
+.info p{
+    font-size: 14px;
+  
+}
+.info .button-view{
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-right: 0 ;
+    
+
+    
+}
+.info .button-view button{
+    
+    font-size: 16px;
+    padding: 4px 12px;
+    height: 30px;
+    border: 2px solid rgb(218, 210, 200);
+    border-radius: 5px;
+   
+
+    
+   
+    
+}
+.sub-date{
+    /* border: 1px solid rgb(233, 229, 229); */
+    width:397px;
+    padding: 1px;
+}
+.sub-date p{
+    font-size: 14px;
+    padding: 2px;
+}
+.sub-calend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px solid rgb(218, 210, 200);
+    width:400px;
+    margin-left:-2px;
+    padding-right:1px;
+
+}
+.sub-calend p{
+    padding: 0 12px;
+}
+
+.sub-names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:25px;
+    border: 1px solid rgb(218, 210, 200);
+    width:400px;
+    margin-left:-2px;
+    padding-bottom: 5px;
+    background-color: rgb(226, 224, 224);
+    
+    
+    
+    
+}
+.sub-names .list-name{
+    list-style: none;
+    
+}

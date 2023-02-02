@@ -1,0 +1,35 @@
+.news-all-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+.news-page-manager-container{
+    border: 1px solid #c1c1c2;
+    width: 1220px;
+    height: 36.2px;
+    background-color:  #f6fafa;
+    position: relative;
+    top: -1px;
+}
+.news-page-manager{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    background-color: #f5f8f8;
+    margin-bottom: 20px;
+    border: none;
+    
+}
+.news-page-manager button{
+    padding: 8px 12px;
+}
+.news-page-manager .one{
+    padding: 10px 14px;
+    position: relative;
+    top: -2px;
+    border: 1px solid #c1c1c2;
+}
