@@ -6,7 +6,7 @@ import {Routes, Route} from 'react-router-dom'
 import Cards from './components/Cards';
 import Services from './components/Services';
 import {About} from './screens/About/About';
-import {Contact} from './screens/Contact';
+import {Contact} from './screens/Contact/Contact';
 import {OurProperties} from './screens/ourProprties/OurProperties';
 import {News} from './screens/News/News';
 import {MLS} from './screens/MLS/MLS';
@@ -17,7 +17,8 @@ import {Nextpage} from './screens/News/Nextpage'
 
 import HomeCards from './components/HomeCards';
 import AboutCards from "./components/AboutCards";
-
+import { Login } from "./screens/Login/Login";
+import { Create } from "./screens/Login/Create";
 
 
 
@@ -43,6 +44,9 @@ function App() {
         <Route path='news/readmore' element={<Readmore/>}/>
         <Route path='news/readmore/page2' element={<Nextpage/>}/>
         <Route path='about/aboutcards' element={<AboutCards/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/login/Create' element={<Create/>}></Route>
+        
         
       </Routes>
       

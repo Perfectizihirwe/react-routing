@@ -7,12 +7,17 @@ import {TbBuildingSkyscraper} from 'react-icons/tb'
 import {BsPeopleFill} from 'react-icons/bs'
 import {BiWorld} from 'react-icons/bi'
 import {BsHeart} from 'react-icons/bs'
+import { Login } from '../screens/Login/Login';
+
 
 
 export const Home = ()=>{
   return (
+    <>
     <div>
+    
       <div className='home-wrapper'>
+
         <form className='home-container1'>
           <div className='home-paragraph1'>
             <h6>Luxury Real Estate</h6>
@@ -30,6 +35,7 @@ export const Home = ()=>{
           </div>
           
         </form>
+        
         <div className='home-mid-pargra'>
           <h3>We Offer The Highest Level Of Expertise, Service, And Integrity.</h3>
           <p>Lorem ipsum dolor sit amet, cons ectetur adip cing ellit, selad do eiusmod tempor tolos dolor the old she roltoy incid idunt labore ellt dolore magna the alora aliqua.</p>
@@ -198,10 +204,12 @@ export const Home = ()=>{
         </div> 
 
        </form>
+
+
       </div>
-     
-     
-    </div>
     
+    </div>
+   
+    </>
   )
 }

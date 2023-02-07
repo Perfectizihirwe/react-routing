@@ -4,7 +4,39 @@ import './News.css'
 import Services from '../../components/Services'
 import { Link } from 'react-router-dom'
 
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+
+
 export const Nextpage= () =>{
+
+     const [email, setEmail] = useState("");
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() =>{
+        fetchData();
+    }, []);
+
+    const handleEmailChange = (event) => {
+        event.preventDefault();
+        setEmail(event.target.value);
+    };
+    console.log(blogs, "blogs");
+
+    
+    const fetchData=  () => {
+        axios({
+            method: "GET",
+            url: "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=48262bd238ea4e2f8885d992905f5474",
+
+        }).then((response) => {
+            setBlogs(response.data.articles);
+        }).catch((error) =>{
+            console.log(error);
+        });
+        
+    };
+
     return (
              
     
@@ -52,21 +84,20 @@ export const Nextpage= () =>{
         </div>
         <div className='news-all-wrapper'>
 
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-4-1-1536x967.jpg'
-        title='The Blair Owens Team Named #1 Brokerage In San Diego'
-        />
+        {blogs.map((item) => {
+            if(item.urlToImage !== null) {
+                return ( <Services
+                    urlImg={item.urlToImage}
+                    title={item.title}
+                    description={item.description}
+                    />
+                );
+            }
+        })}
+      
+       
 
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-2-1-1536x967.jpg'
-        title='New & Notable Luxury Properties In San Diego 2021'
-        />
-
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/2-1-1536x967.jpg'
-        title='Trend Report: What’s “In” In Luxury Real Estate'
-        />
-
+    
  
         <br></br>
         <br></br>

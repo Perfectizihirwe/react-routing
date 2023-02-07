@@ -1,0 +1,74 @@
+.login-wrapper{
+    position: fixed;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url('https://elementor1.contempothemes.com/wp-content/uploads/2020/12/2-1-1536x967.jpg');
+    justify-content: center;
+    
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    z-index: -4;
+    
+}
+
+.login-container{
+    width: 250px;
+    height: 550px;
+    padding: 30px;
+    background-color: #fff;
+    margin-left: 520px;
+    border-radius: 5px;
+
+}
+.login-container h1{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.login-container p{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.login-container label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.login-container input{
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 8px 29px;
+    border-radius: 5px;
+    border: 1px solid #d8d5d5;
+}
+.login-container button{
+    
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0a0a6e;
+    color: #fff;
+    
+}
+.login-container .login-one{
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #011640;
+}
+.login-container .login-two{
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #1877F2;
+
+}
+.login-container .login-three{
+ 
+   text-align: center;
+   border-radius: 5px;
+   border: none;
+   background-color: #C63D2D;
+   margin-bottom: 40px;
+
+}

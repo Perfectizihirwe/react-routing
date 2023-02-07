@@ -1,0 +1,72 @@
+.create-wrapper{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url('https://elementor1.contempothemes.com/wp-content/uploads/2020/12/2-1-1536x967.jpg');
+    justify-content: center;
+    z-index: -2;
+    height: 100%;
+    margin: 0;
+}
+
+.create-container{
+    width: 250px;
+    height: 570px;
+    padding: 30px;
+    background-color: #fff;
+    margin-left: 520px;
+    border-radius: 5px;
+
+}
+.create-container h1{
+    font-size: 20px;
+   
+}
+.create-container p{
+    font-size: 15px;
+  
+}
+.create-container label{
+    font-size: 15px;
+   
+}
+.create-container input{
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 8px 29px;
+    border-radius: 5px;
+    border: 1px solid #d8d5d5;
+}
+
+.create-container .create-names{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    width: 250px;
+}
+.create-container .create-nameslast{
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+    width: 250px;
+}
+.create-container .create-inputsnames{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+ 
+}
+.create-container .create-inputnames{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+ 
+}
+
+.create-container .create-names .one{
+   width: 20px;
+}
+
+.create-container .create-names .two{
+   width: 15px;
+}

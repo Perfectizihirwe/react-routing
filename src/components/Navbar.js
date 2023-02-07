@@ -4,10 +4,12 @@ import "@fontsource/montserrat"; // Defaults to weight 400.
 import {BiUserCircle} from 'react-icons/bi';
 
 import {Link} from 'react-router-dom'
+import { Login } from "../screens/Login/Login";
 export const Navbar = () =>{
     return (
       <>
         <nav>
+        
           <div className="App-header">
           <h1><Link to={'/'}>BLAIR OWENS</Link></h1>
           <ul className="lists">
@@ -17,7 +19,7 @@ export const Navbar = () =>{
             <li><Link to={'/news'}>News</Link></li>
             <li><Link to={'/about'}>About Blair</Link></li>
             <li><Link to={'contact'}>contact</Link></li>
-            <i><BiUserCircle className='icon'/></i>
+            <i><Link to={'/login'}><BiUserCircle className='icon'/></Link></i>
             
           </ul>
           

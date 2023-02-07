@@ -20,10 +20,9 @@
     
     flex-wrap: wrap;
     height: 600px;
-    
-   
     overflow-y: scroll;
-    scrollbar-width: 1px;
+    
+
     padding: 0;
 }
       

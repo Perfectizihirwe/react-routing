@@ -3,14 +3,47 @@ import '../../screens/ourProprties/style.css'
 import './News.css'
 import Services from '../../components/Services'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
 export const News= () =>{
+
+    const [email, setEmail] = useState("");
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() =>{
+        fetchData();
+    }, []);
+
+    const handleEmailChange = (event) => {
+        event.preventDefault();
+        setEmail(event.target.value);
+    };
+    console.log(blogs, "blogs");
+
+    
+
+    const fetchData=  () => {
+        axios({
+            method: "GET",
+            url: "https://newsapi.org/v2/top-headlines?q=trump&apiKey=48262bd238ea4e2f8885d992905f5474",
+            // url: "https://newsapi.org/v2/everything?q=Apple&from=2023-02-03&sortBy=popularity&apiKey=48262bd238ea4e2f8885d992905f5474",
+            // url: "https://newsapi.org/v2/top-headlines?country=us&apiKey=48262bd238ea4e2f8885d992905f5474",
+
+        }).then((response) => {
+            setBlogs(response.data.articles);
+        }).catch((error) =>{
+            console.log(error);
+        });
+        
+    };
+
     return (
              
     
     <>
         <form className='form'>
-                    <div><input type={"text"} placeholder="Street, city, or Zip"/></div>
+                    <div><input type={"text"} placeholder="Email" onChange={(e) => handleEmailChange}/></div>
                     <div>
                         <label for="cars"></label>
 
@@ -52,35 +85,21 @@ export const News= () =>{
         </div>
         <div className='news-all-wrapper'>
 
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-9-1.jpg'
-        title='New Development: The Crosby Estates At Rancho Sante Fe'
-        />
+        {blogs.map((item) => {
+            if(item.urlToImage !== null) {
+                return ( <Services
+                    urlImg={item.urlToImage}
+                    title={item.title}
+                    description={item.description}
+                    />
+                );
+            }
+        })}
+      
 
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-8-1-1536x967.jpg'
-        title='Highrise Penthouse Living In Downtown San Diego'
-        />
+    
 
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-7-1-1536x967.jpg'
-        title='New Development: The Bluffs At La Jolla Shores'
-        />
-
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-6-1-1536x967.jpg'
-        title='Why You Should Overlook Cosmetic Issues When House Hunting'
-        />
-
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-5-1-1536x967.jpg'
-        title='A Record Breaking Month: What Is Happening In The Market?'
-        />
-
-        <Services
-        urlimg='https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-3-1-1536x967.jpg'
-        title='Traditional Vs. Open Floor Plans: Which One Is Right For You?'
-        />
+      
         <br></br>
         <br></br>
         <br></br>
@@ -93,7 +112,7 @@ export const News= () =>{
                     <button>2</button>
                 </div>
                 <div>
-                    <button><Link to={'/news/readmore/page2'}>Next Page</Link> <small>>></small></button>
+                    <button><Link to={'/news/readmore/page2'}>Next Page</Link> <small></small></button>
                 </div>
         </div>
        </div>
