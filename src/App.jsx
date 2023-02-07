@@ -25,7 +25,7 @@ function App() {
           Increment
         </button>
         <button onClick={() => dispatch(decrement())} >Decrement</button>
-        <button onClick={() => dispatch(customCount(13))}>Set it to 13</button>
+        <button onClick={() => dispatch(customCount(14))}>Set it to 14</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
